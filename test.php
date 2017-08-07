@@ -3,4 +3,9 @@
 require __DIR__ . '/vendor/autoload.php';
 
 $git = new GitDownload(__DIR__ . '/themes');
-$git->clone('BlackrockDigital', 'startbootstrap-agency', 'master');
+
+$author     = 'BlackrockDigital';
+$repository = 'startbootstrap-agency';
+$branch     = 'master';
+
+$git->clone($author, $repository, $branch);
