@@ -10,13 +10,15 @@ $ composer require wbadrh/git-dl
 ```
 
 ```php
-$git = new GitDownload(__DIR__ . '/themes');
+<?php
 
-$author     = 'BlackrockDigital';
-$repository = 'startbootstrap-agency';
+$git = new GitDownload(__DIR__ . '/downloaded');
+
+$author     = 'wbadrh';
+$repository = 'git-dl';
 $branch     = 'master';
 
 $git->clone($author, $repository, $branch);
 ```
 
-Would download in: themes/BlackrockDigital/startbootstrap-agency/
+Would download in: downloaded/wbadrh/git-dl/
