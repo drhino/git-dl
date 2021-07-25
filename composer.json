@@ -9,7 +9,7 @@
         "ext-zip": "*",
         "lib-curl": "*",
         "curl/curl": "^1.7",
-        "league/flysystem": "^1.0"
+        "league/flysystem": "^1.1.4"
     },
     "autoload": {
         "psr-0": { "GitDownload": "" }
