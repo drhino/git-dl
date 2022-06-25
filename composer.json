@@ -7,8 +7,6 @@
     "license": "MIT",
     "require": {
         "ext-zip": "*",
-        "lib-curl": "*",
-        "curl/curl": "^1.7",
         "league/flysystem": "^1.1.4"
     },
     "autoload": {
