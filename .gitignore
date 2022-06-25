@@ -1,3 +1,4 @@
 downloaded/
 vendor/
 composer.phar
+composer.lock
