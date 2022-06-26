@@ -29,6 +29,7 @@ echo "Saved to: $path";
 The zip-archive is downloaded from Github. Then unpacked with ZipArchive.
 <br>From version 1.1.x and above; A stream is used to keep a low memory footprint.
 <br>After a succesful unpack, the downloaded archive is removed.
+<br>Cloning an existing repository updates to the latest version.
 
 ## Changelog:
 
