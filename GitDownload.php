@@ -38,7 +38,7 @@ class GitDownload
      *
      * @throws Exception ZipArchive failed
      *
-     * @return String $relative path to directory location.
+     * @return String $absolute path to directory location.
      *
      * @see https://www.php.net/manual/en/function.fopen
      * @see https://stackoverflow.com/a/2174899/19052212
@@ -52,16 +52,16 @@ class GitDownload
         $url = 'https://codeload.github.com/' . $author . '/' . $repo . '/zip/' . $branch;
 
         $relative = $author . '/' . $repo . '.zip';
-        $absolute = $this->dir . '/' . $relative;
+        $absolute = $this->dir . '/' . $author . '/' . $repo;
         $resource = @fopen($url, 'rb');
 
-        // Downloads the zipfile on the local filesystem.
+        // Downloads the zipfile to the local filesystem.
         $this->fs->has($relative) && $this->fs->delete($relative);
         $this->fs->writeStream($relative, $resource);
 
         // Extracts the zipfile.
         $zip = new ZipArchive;
-        $status = $zip->open($absolute, ZipArchive::CHECKCONS);
+        $status = $zip->open($absolute . '.zip', ZipArchive::CHECKCONS);
         if (true === $status) $status = $zip->extractTo(dirname($absolute));
         $zip->close();
 
@@ -86,6 +86,6 @@ class GitDownload
             $this->fs->move($relative . '-' . $branch, $relative);
         }
 
-        return $relative;
+        return $absolute;
     }
 }
