@@ -3,13 +3,11 @@
     "type": "library",
     "description": "Clone a Github repository with PHP & ZipArchive. Without using Git or exec()!",
     "keywords": ["git", "clone", "download", "repository", "github", "ziparchive"],
-    "homepage": "https://github.com/wbadrh/git-dl",
+    "homepage": "https://github.com/drhino/git-dl",
     "license": "MIT",
     "require": {
         "ext-zip": "*",
-        "lib-curl": "*",
-        "curl/curl": "^1.7",
-        "league/flysystem": "^1.1.4"
+        "league/flysystem": "^1.1.4 || ^3.0"
     },
     "autoload": {
         "psr-0": { "GitDownload": "" }
